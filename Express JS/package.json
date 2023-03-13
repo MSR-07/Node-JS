@@ -1,0 +1,21 @@
+{
+  "name": "express-js",
+  "version": "1.0.0",
+  "description": "Node jS FrameWork Express JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "JS",
+    "Express",
+    "JS",
+    "API"
+  ],
+  "author": "Muhammad Saif ur Rehman",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
