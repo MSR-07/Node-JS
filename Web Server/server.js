@@ -25,6 +25,7 @@ server.on("request", (req, res) => {
       console.log(`Request:${friend}`);
       colleagues.push(JSON.parse(friend));
     });
+    req.pipe(res);
   } else if (req.method === "GET" && items[1] === "friend") {
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
@@ -59,3 +60,10 @@ server.listen(PORT, () => {
 //   method: "POST",
 //   body: JSON.stringify({ id: 3, name: "Sulman Bhi" }),
 // });
+
+// ----------------As Stream---------------
+// fetch('http://localhost:3000/friend',{
+//     method:'POST',
+// body:JSON.stringify({id:3,name:'Sulman Bhi'})
+// }).then((response)=> response.json())
+// .then((friend)=>console.log(friend))
