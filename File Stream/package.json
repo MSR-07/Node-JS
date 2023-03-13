@@ -1,0 +1,29 @@
+{
+  "name": "kepler-22b",
+  "version": "1.0.0",
+  "description": "NASA kepler Data Read with Node Js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github.com/MSR-07.git"
+  },
+  "keywords": [
+    "NASA",
+    "Node",
+    "Js",
+    "csvParse",
+    "Kepler-22b"
+  ],
+  "author": "Muhammad Saif ur Rehman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github.com/MSR-07/issues"
+  },
+  "homepage": "https://github.com/github.com/MSR-07#readme",
+  "dependencies": {
+    "csv-parse": "^5.3.6"
+  }
+}
