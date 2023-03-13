@@ -19,7 +19,13 @@ const colleagues = [
 ];
 server.on("request", (req, res) => {
   const items = req.url.split("/");
-  if (items[1] === "friend") {
+  if (req.method === "POST" && items[1] === "friend") {
+    req.on("data", (data) => {
+      const friend = data.toString();
+      console.log(`Request:${friend}`);
+      colleagues.push(JSON.parse(friend));
+    });
+  } else if (req.method === "GET" && items[1] === "friend") {
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
     if (items.length === 3) {
@@ -28,7 +34,7 @@ server.on("request", (req, res) => {
     } else {
       res.end(JSON.stringify(colleagues));
     }
-  } else if (items[1] === "message") {
+  } else if (req.method === "POST" && items[1] === "message") {
     res.setHeader("Content-Type", "text/html");
     res.write("<html>");
     res.write("<body>");
@@ -49,3 +55,7 @@ server.on("request", (req, res) => {
 server.listen(PORT, () => {
   console.log(`Listening on port ${PORT}....`);
 });
+// fetch("http://localhost:3000/friend", {
+//   method: "POST",
+//   body: JSON.stringify({ id: 3, name: "Sulman Bhi" }),
+// });
