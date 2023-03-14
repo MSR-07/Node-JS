@@ -1,3 +1,14 @@
+const friends = [
+  {
+    id: 0,
+    name: "Umer Bhi",
+  },
+  {
+    id: 1,
+    name: "Hamza Bhi",
+  },
+];
+
 function getFriends(req, res) {
   res.json(friends);
 }

@@ -4,16 +4,6 @@ const friendsControllers = require("./Controllers/friends.controller");
 const app = express();
 
 const PORT = 3000;
-const friends = [
-  {
-    id: 0,
-    name: "Umer Bhi",
-  },
-  {
-    id: 1,
-    name: "Hamza Bhi",
-  },
-];
 
 app.use((req, res, next) => {
   const start = Date.now();
